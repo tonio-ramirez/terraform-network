@@ -1,0 +1,7 @@
+.idea/
+.kitchen/
+bin/
+terraform.tfstate.d/
+.terraform/
+.bundle/
+.kitchen.local.yml

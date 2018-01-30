@@ -1,0 +1,19 @@
+driver:
+  name: terraform
+  variable_files:
+    - test.json
+
+provisioner:
+  name: terraform
+
+platforms:
+  - name: aws
+
+verifier:
+  name: awspec
+
+suites:
+  - name: default
+    verifier:
+      patterns:
+        - spec/*_spec.rb
