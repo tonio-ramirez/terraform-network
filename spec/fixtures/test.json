@@ -3,8 +3,12 @@
   "vpc_name": "my-vpc",
   "cidr_block": "10.0.0.0/16",
   "availability_zones": ["us-east-1a", "us-east-1b"],
-  "subnet_cidr_blocks": {
+  "public_subnet_cidr_blocks": {
     "us-east-1a": "10.0.0.0/19",
     "us-east-1b": "10.0.32.0/19"
+  },
+  "private_subnet_cidr_blocks": {
+    "us-east-1a": "10.0.64.0/19",
+    "us-east-1b": "10.0.96.0/19"
   }
 }

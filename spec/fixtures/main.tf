@@ -14,7 +14,11 @@ variable "availability_zones" {
   type = "list"
 }
 
-variable "subnet_cidr_blocks" {
+variable "public_subnet_cidr_blocks" {
+  type = "map"
+}
+
+variable "private_subnet_cidr_blocks" {
   type = "map"
 }
 
@@ -23,5 +27,6 @@ module "base_networking" {
   vpc_name = "${var.vpc_name}"
   cidr_block = "${var.cidr_block}"
   availability_zones = "${var.availability_zones}"
-  subnet_cidr_blocks = "${var.subnet_cidr_blocks}"
+  public_subnet_cidr_blocks = "${var.public_subnet_cidr_blocks}"
+  private_subnet_cidr_blocks = "${var.private_subnet_cidr_blocks}"
 }
