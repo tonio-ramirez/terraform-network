@@ -3,7 +3,6 @@ require 'json'
 
 tfvars = JSON.parse(File.read(File.absolute_path("spec/fixtures/test.json")))
 
-describe vpc(tfvars["vpc_name"]) do
+describe subnet("#{tfvars["vpc_name"]}-subnet") do
   it { should exist }
-  its(:cidr_block) { should eq tfvars["cidr_block"] }
 end

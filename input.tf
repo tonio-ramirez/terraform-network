@@ -5,3 +5,11 @@ variable "vpc_name" {
 variable "cidr_block" {
   type = "string"
 }
+
+variable "availability_zones" {
+  type = "list"
+}
+
+variable "subnet_cidr_blocks" {
+  type = "map"
+}
