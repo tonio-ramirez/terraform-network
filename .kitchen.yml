@@ -1,5 +1,6 @@
 driver:
   name: terraform
+  root_module_directory: spec/fixtures
   variable_files:
     - test.json
 
