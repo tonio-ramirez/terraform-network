@@ -4,6 +4,6 @@ resource "aws_subnet" "this" {
   availability_zone = "${element(var.availability_zones, count.index)}"
   vpc_id = "${aws_vpc.this.id}"
   tags {
-    Name = "${format("%s-subnet", var.vpc_name)}"
+    Name = "${format("%s-%s-subnet", var.vpc_name, element(var.availability_zones, count.index))}"
   }
 }
