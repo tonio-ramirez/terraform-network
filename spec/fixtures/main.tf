@@ -30,3 +30,23 @@ module "base_networking" {
   public_subnet_cidr_blocks = "${var.public_subnet_cidr_blocks}"
   private_subnet_cidr_blocks = "${var.private_subnet_cidr_blocks}"
 }
+
+output "vpc_id" {
+  value = "${module.base_networking.vpc_id}"
+}
+
+output "public_subnet_ids" {
+  value = ["${module.base_networking.public_subnet_ids}"]
+}
+
+output "azs" {
+  value = ["${module.base_networking.azs}"]
+}
+
+output "private_subnet_ids" {
+  value = ["${module.base_networking.private_subnet_ids}"]
+}
+
+output "natgw_ids" {
+  value = ["${module.base_networking.natgw_ids}"]
+}
